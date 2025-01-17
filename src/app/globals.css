@@ -19,3 +19,69 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+
+  /* Footer */
+  .logo {
+    @apply flex justify-center w-full h-[100px]
+  }
+
+  /*Main*/
+  h1 {
+    @apply text-3xl block
+  }
+
+  main {
+    @apply flex justify-center
+  }
+
+  .containerList {
+    @apply w-[1024px] flex flex-col items-center
+  }
+
+  .formSearch {
+    @apply flex gap-6 w-full
+  }
+
+  .inputsSearch {
+    @apply w-full h-8 p-2 text-violet-800 border-2 rounded border-violet-800 focus:outline-none
+  }
+
+  .buttonSearch {
+    @apply w-[200px] h-8 rounded-md bg-violet-800 text-white
+  }
+
+  .btnCreate {
+    @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800
+  }
+
+  .taskList {
+    @apply w-[700px] h-full  m-10
+  }
+  .taskContainer{
+    @apply flex w-full border-b-2 border-violet-800 mb-4 p-2
+  }
+
+  .checkBoxContainer{
+    @apply w-12 flex justify-center items-center 
+  }
+
+  .taskCheckBox{
+    @apply 
+    w-6
+    h-6
+    appearance-none
+    rounded
+    border 
+    bg-white 
+    checked:bg-indigo-600
+    checked:text-white
+    checked:before:content-['✔'] 
+    checked:before:text-white 
+    checked:before:text-lg
+    checked:before:flex 
+    checked:before:items-center 
+    checked:before:justify-center
+  }
+}

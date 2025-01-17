@@ -1,0 +1,54 @@
+{
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Complete Project Proposal",
+        "text": "Write a detailed proposal for the new client project including timeline, budget, and resource requirements."
+      },
+      {
+        "id": "2",
+        "title": "Buy Groceries",
+        "text": "Get milk, eggs, bread, fruits, and vegetables from the supermarket. Don't forget to check for fresh produce."
+      },
+      {
+        "id": "3",
+        "title": "Schedule Team Meeting",
+        "text": "Organize weekly team sync-up to discuss project progress and address any blocking issues."
+      },
+      {
+        "id": "4",
+        "title": "Learn TypeScript",
+        "text": "Complete the TypeScript tutorial on the official website and practice with small projects."
+      },
+      {
+        "id": "5",
+        "title": "Fix Navigation Bug",
+        "text": "Debug and resolve the navigation issue in the mobile app's sidebar component."
+      },
+      {
+        "id": "6",
+        "title": "Optimize Image Loading",
+        "text": "Improve the image loading performance on the homepage to reduce latency."
+      },
+      {
+        "id": "7",
+        "title": "Update User Profile UI",
+        "text": "Redesign the user profile page for better user experience and consistency with the new theme."
+      },
+      {
+        "id": "8",
+        "title": "Implement Dark Mode",
+        "text": "Add support for dark mode across all app screens and ensure proper theme switching."
+      },
+      {
+        "id": "9",
+        "title": "Fix Login Validation Bug",
+        "text": "Resolve the issue where incorrect error messages are shown during login failures."
+      },
+      {
+        "id": "10",
+        "title": "Add Multi-Language Support",
+        "text": "Enable multi-language support in the app, starting with Spanish and French translations."
+      }
+    ]
+  }
