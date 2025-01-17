@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import taskList from '../../store/taskList.json'
 
 export default function TaskList() {
-
+    const [isActive, setIsActive] = useState(true)
+    const onActive = () => {
+        setIsActive(!isActive)
+    }
     return (
         <div className='taskList'>
             {taskList.tasks.map((item) => (
@@ -13,8 +16,10 @@ export default function TaskList() {
                         <input type='checkbox' className='taskCheckBox'></input>
                     </div>
                     <div className='taskData'>
-                        <div className='taskTitle'>{item.title}</div>
-                        <div className='taskText'>{item.text}</div>
+                        <div className='taskTitle'>{item.title}
+                            <button type='button' onClick={onActive}>Active</button>
+                        </div>
+                        <div className={isActive ? 'taskText':'taskText active'}>{item.text}</div>
                     </div>
                 </div>
             ))}

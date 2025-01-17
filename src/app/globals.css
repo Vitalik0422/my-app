@@ -57,31 +57,25 @@ body {
   }
 
   .taskList {
-    @apply w-[700px] h-full  m-10
-  }
-  .taskContainer{
-    @apply flex w-full border-b-2 border-violet-800 mb-4 p-2
+    @apply w-[700px] h-full m-10
   }
 
-  .checkBoxContainer{
-    @apply w-12 flex justify-center items-center 
+  .taskContainer {
+    @apply flex w-full border-b-[1px] border-violet-800 p-4
   }
 
-  .taskCheckBox{
-    @apply 
-    w-6
-    h-6
-    appearance-none
-    rounded
-    border 
-    bg-white 
-    checked:bg-indigo-600
-    checked:text-white
-    checked:before:content-['✔'] 
-    checked:before:text-white 
-    checked:before:text-lg
-    checked:before:flex 
-    checked:before:items-center 
-    checked:before:justify-center
+  .checkBoxContainer {
+    @apply w-12 flex justify-center items-center
+  }
+
+  .taskCheckBox {
+    @apply w-6 h-6 appearance-none rounded border bg-white checked:bg-indigo-600 checked:text-white checked:before:content-['✔'] checked:before:text-white checked:before:text-lg checked:before:flex checked:before:items-center checked:before:justify-center
+  }
+  .taskText {
+    @apply hidden
+  }
+  .active
+  {
+    @apply block
   }
 }
