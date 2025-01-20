@@ -1,6 +1,7 @@
 'use client';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
+import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 type SearchFieldProps={
   readonly onSearch:(query:string) => void,
@@ -24,7 +25,7 @@ const onSubmit = (query: any) => {
         placeholder='Search note...' />
       <button type='submit' className='buttonSearch'>GO</button>
     </form>
-      <button type='button'className='btnCreate'>+</button>
+      <Link href='/create'><button type='button'className='btnCreateLink'>+</button></Link>
     </>
   )
 }
