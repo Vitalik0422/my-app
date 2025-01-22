@@ -3,6 +3,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { joiResolver } from '@hookform/resolvers/joi';
 import { validationCreateTask } from './validationSchemaCreateTasl';
+import { todosStore } from '@/store/todosStore';
 type SubmitData = {
     'title': string,
     'text': string
@@ -16,8 +17,9 @@ export default function Create() {
     } = useForm<SubmitData>({
         resolver
     })
-    const onSubmit = (data: SubmitData) => {
-        console.log(data)
+    const onSubmit = async (data: SubmitData) => {
+        const response = await todosStore.createTodo(data)
+        console.log(response)
     }
     return (
         <form action="" className='formCreateTask' onSubmit={handleSubmit(onSubmit)}>

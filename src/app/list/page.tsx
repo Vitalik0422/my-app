@@ -1,6 +1,6 @@
 'use client';
 import SearchField from '@/components/List/SearchField'
-import TaskList from '@/components/List/TaskList';
+import ToDoList from '@/components/List/ToDoList'
 import React from 'react'
 
 
@@ -12,7 +12,7 @@ export default function List(){
     <main>
       <div className='containerList'>
         <SearchField onSearch={handleSearch} />
-        <TaskList/>
+        <ToDoList/>
       </div>
     </main>
   )

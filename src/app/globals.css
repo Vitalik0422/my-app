@@ -97,5 +97,11 @@ body {
   .btnCreate{
     @apply w-24 h-8 rounded bg-violet-800 text-white place-self-end
   }
+  .todoUpdateContainer{
+    @apply flex flex-col w-full
+  }
 
+  .todoUpdateInput{
+    @apply w-full h-8 p-2 mt-2 text-violet-800 rounded border-2 border-violet-800 focus:outline-none
+  }
 }
