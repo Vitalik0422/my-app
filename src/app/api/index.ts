@@ -7,5 +7,6 @@ export const axiosInstance = axios.create({
 export enum URL{
     TODO = 'todos',
     TODO_DELETE = 'todos/delete',
+    TODO_IS_COMPLETED = 'todos/isCompleted'
 }
 

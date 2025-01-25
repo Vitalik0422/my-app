@@ -17,5 +17,8 @@ export const todosApi = {
     },
     delete(id: number[]){
         return axiosInstance.post(URL.TODO_DELETE, id)
+    },
+    isCompleted(data: {id: number, isCompleted: boolean}){
+        return axiosInstance.post(URL.TODO_IS_COMPLETED, data)
     }
 }

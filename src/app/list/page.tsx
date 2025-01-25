@@ -1,6 +1,6 @@
 'use client';
-import SearchField from '@/components/List/SearchField'
-import ToDoList from '@/components/List/ToDoList'
+import SearchField from '@/components/shared/List/SearchField'
+import ToDoList from '@/components/shared/List/ToDoList'
 import React from 'react'
 
 
