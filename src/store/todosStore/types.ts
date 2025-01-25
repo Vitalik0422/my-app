@@ -8,7 +8,7 @@ export type deleteArrayId = {
 }
 
 export type updateTodo = {
-    'id': string,
+    'id': number,
     'title': string,
     'text': string
 }

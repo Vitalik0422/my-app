@@ -1,5 +1,5 @@
 import { axiosInstance, URL } from ".";
-import { deleteArrayId, todoCreate,updateTodo } from "@/store/todosStore/types";
+import { todoCreate,updateTodo } from "@/store/todosStore/types";
 
 
 export const todosApi = {
@@ -15,7 +15,7 @@ export const todosApi = {
     update(data: updateTodo){
         return axiosInstance.put(URL.TODO, data)
     },
-    delete(id: deleteArrayId[]){
+    delete(id: number[]){
         return axiosInstance.post(URL.TODO_DELETE, id)
     }
 }

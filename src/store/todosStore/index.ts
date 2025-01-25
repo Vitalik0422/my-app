@@ -1,5 +1,5 @@
 import { todosApi } from "@/app/api/todosApi";
-import { todoCreate, deleteArrayId,updateTodo } from "./types";
+import { todoCreate ,updateTodo } from "./types";
 
 export const todosStore = {
 
@@ -12,7 +12,7 @@ export const todosStore = {
         const response = await todosApi.getAll()
         return response.data
     },
-    async deleteTodo(ids: deleteArrayId[]){
+    async deleteTodo(ids: number[]){
         const response = await todosApi.delete(ids)
         return response.data 
     },  

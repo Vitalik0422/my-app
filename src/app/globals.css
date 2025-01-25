@@ -53,7 +53,7 @@ body {
   }
 
   .btnCreateLink {
-    @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800
+    @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800 mt-2
   }
 
   .taskList { 
