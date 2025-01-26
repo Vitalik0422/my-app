@@ -33,13 +33,18 @@ body {
   }
 
   main {
-    @apply flex justify-center
+    @apply flex mx-auto justify-center w-[1024px]
+  }
+
+  form {
+    @apply w-full
   }
 
   input {
     @apply w-full h-8 p-2 text-violet-800 rounded border-2 border-violet-800 focus:outline-none
   }
-  button{
+
+  button {
     @apply w-24 h-8 rounded bg-violet-800 text-white place-self-end
   }
 
@@ -48,7 +53,7 @@ body {
   }
 
   .containerList {
-    @apply w-[1024px] flex flex-col items-center
+    @apply flex flex-col items-center
   }
 
   .formSearch {
@@ -67,7 +72,7 @@ body {
     @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800 mt-2
   }
 
-  .taskList { 
+  .taskList {
     @apply w-[700px] h-full m-10
   }
 
@@ -79,7 +84,7 @@ body {
     @apply w-12 flex justify-center items-center
   }
 
-  .taskData{
+  .taskData {
     @apply w-full
   }
 
@@ -90,7 +95,8 @@ body {
   .active {
     @apply block
   }
-  .btnShowTask{
+
+  .btnShowTask {
     @apply place-self-end rounded-full text-violet-800
   }
 
@@ -98,21 +104,19 @@ body {
     @apply flex flex-col w-full gap-4
   }
 
-  .inputCreateTask {
-    @apply w-full h-8 p-2 text-violet-800 rounded border-2 border-violet-800 focus:outline-none
-  }
-
-  .btnCreate{
-    @apply w-24 h-8 rounded bg-violet-800 text-white place-self-end
-  }
-  .todoUpdateContainer{
+  .todoUpdateContainer {
     @apply flex flex-col w-full
   }
 
-  .todoUpdateInput{
-    @apply w-full h-8 p-2 mt-2 text-violet-800 rounded border-2 border-violet-800 focus:outline-none
+  .snackBarContainer {
+    @apply w-40 h-16 border border-violet-800 rounded fixed top-10 right-10 text-center p-4 text-xl
   }
-  .completed{
-    @apply line-through
+
+  .Success {
+    @apply border-green-600 text-green-600
+  }
+  .Error {
+    @apply border-red-600
   }
 }
+

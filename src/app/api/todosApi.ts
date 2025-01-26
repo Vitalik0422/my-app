@@ -7,7 +7,7 @@ export const todosApi = {
         return axiosInstance.post(URL.TODO, data)
     },
     get(id: string){
-        return axiosInstance.get(URL.TODO + `/${id}`)
+        return axiosInstance.post(URL.TODO_FIND, id)
     },
     getAll(){
         return axiosInstance.get(URL.TODO)

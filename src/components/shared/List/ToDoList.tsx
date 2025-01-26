@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { todosStore } from '@/store/todosStore'
 import Button from '@/components/ui/Button'
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import CheckBox from '@/components/ui/CheckBox'
 import { todosApi } from '@/app/api/todosApi'
 type Todos = {
@@ -17,6 +17,7 @@ type HandleComplete = {
 
 
 export default function ToDoList() {
+    const router = useRouter()
     const [todos, setTodos] = useState<Todos>()
 
 
@@ -33,7 +34,7 @@ export default function ToDoList() {
         const response = await todosStore.getTodo()
         setTodos(response)
         console.log(response);
-        
+
     }
     return (
         <>
@@ -47,9 +48,9 @@ export default function ToDoList() {
                             className='taskContainer'>
                             <div className='checkBoxContainer'>
                                 <CheckBox
-                                checked={item.isCompleted}
-                                value={item.id}
-                                onChange={()=>{handleComplete({id: item.id, isCompleted: !item.isCompleted})}}
+                                    checked={item.isCompleted}
+                                    value={item.id}
+                                    onChange={() => { handleComplete({ id: item.id, isCompleted: !item.isCompleted }) }}
                                 />
                             </div>
                             <div className='taskData'>
@@ -58,7 +59,9 @@ export default function ToDoList() {
                             <Button
                                 btnLabel='✎'
                                 type='button'
-                                onClick={() => {redirect(`/edit?id=${item.id}`)}}
+                                onClick={() => {
+                                    router.push(`/edit?id=${item.id}`)
+                                }}
                             />
                         </div>
                     ))}
