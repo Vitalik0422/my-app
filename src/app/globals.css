@@ -33,7 +33,7 @@ body {
   }
 
   main {
-    @apply flex mx-auto justify-center w-[1024px]
+    @apply flex flex-col mx-auto justify-center w-[1024px]
   }
 
   form {
@@ -48,6 +48,17 @@ body {
     @apply w-24 h-8 rounded bg-violet-800 text-white place-self-end
   }
 
+  .searchForm {
+    @apply w-full flex gap-4
+  }
+
+  .taskList {
+    @apply w-full flex flex-col
+  }
+  .taskContainer{
+    @apply w-full flex flex-[1_4_1] border-b border-violet-800
+  }
+
   .checkBox {
     @apply w-6 h-6 appearance-none rounded border bg-white checked:bg-indigo-600 checked:text-white checked:before:content-['✔'] checked:before:text-white checked:before:text-lg checked:before:flex checked:before:items-center checked:before:justify-center checked:before:w-full checked:before:h-full
   }
@@ -56,56 +67,8 @@ body {
     @apply flex flex-col items-center
   }
 
-  .formSearch {
-    @apply flex gap-6 w-full
-  }
-
-  .inputsSearch {
-    @apply w-full h-8 p-2 text-violet-800 border-2 rounded border-violet-800 focus:outline-none
-  }
-
-  .buttonSearch {
-    @apply w-[200px] h-8 rounded-md bg-violet-800 text-white
-  }
-
   .btnCreateLink {
     @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800 mt-2
-  }
-
-  .taskList {
-    @apply w-[700px] h-full m-10
-  }
-
-  .taskContainer {
-    @apply flex w-full border-b-[1px] border-violet-800 p-4
-  }
-
-  .checkBoxContainer {
-    @apply w-12 flex justify-center items-center
-  }
-
-  .taskData {
-    @apply w-full
-  }
-
-  .taskText {
-    @apply hidden
-  }
-
-  .active {
-    @apply block
-  }
-
-  .btnShowTask {
-    @apply place-self-end rounded-full text-violet-800
-  }
-
-  .formCreateTask {
-    @apply flex flex-col w-full gap-4
-  }
-
-  .todoUpdateContainer {
-    @apply flex flex-col w-full
   }
 
   .snackBarContainer {
@@ -115,8 +78,8 @@ body {
   .Success {
     @apply border-green-600 text-green-600
   }
+
   .Error {
     @apply border-red-600
   }
 }
-

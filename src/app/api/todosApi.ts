@@ -1,12 +1,12 @@
 import { axiosInstance, URL } from ".";
-import { todoCreate,updateTodo } from "@/store/todosStore/types";
+import { deleteId, todoCreate,updateTodo } from "@/store/todosStore/types";
 
 
 export const todosApi = {
     create(data: todoCreate){
         return axiosInstance.post(URL.TODO, data)
     },
-    get(id: string){
+    get(id: deleteId){
         return axiosInstance.post(URL.TODO_FIND, id)
     },
     getAll(){
@@ -15,8 +15,8 @@ export const todosApi = {
     update(data: updateTodo){
         return axiosInstance.put(URL.TODO, data)
     },
-    delete(id: number[]){
-        return axiosInstance.post(URL.TODO_DELETE, id)
+    delete(data: deleteId){
+        return axiosInstance.post(URL.TODO_DELETE, data)
     },
     isCompleted(data: {id: number, isCompleted: boolean}){
         return axiosInstance.post(URL.TODO_IS_COMPLETED, data)

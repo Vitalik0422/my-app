@@ -3,12 +3,11 @@ export type todoCreate = {
     text: string
 }
 
-export type deleteArrayId = {
-    'id': string
+export type deleteId = {
+    'id': number
 }
 
 export type updateTodo = {
-    'id': number,
+    'id': string,
     'title': string,
-    'text': string
 }

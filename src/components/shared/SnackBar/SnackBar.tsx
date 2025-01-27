@@ -6,6 +6,9 @@ type Props = {
 export default function SnackBar({status}:Readonly<Props>) {
     let title = ''
     switch (status) {
+        case 200:
+            title = 'Success'
+            break
         case 201:
             title = 'Success'
             break
