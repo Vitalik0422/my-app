@@ -6,18 +6,19 @@ import CheckBox from '@/components/ui/CheckBox'
 import { todosApi } from '@/app/api/todosApi'
 import Input from '@/components/ui/Input'
 import { useForm } from 'react-hook-form'
+import Link from 'next/link'
 type Todos = {
-    'id': number,
+    'id': string,
     'title': string,
     'isCompleted': boolean
 }[]
 
 type HandleComplete = {
-    id: number,
+    id: string,
     isCompleted: boolean
 }
 type HandleDelete = {
-    id: number
+    id: string
 }
 
 export default function ToDoList() {
@@ -53,6 +54,7 @@ export default function ToDoList() {
     }
     return (
         <>
+            <Link className='linkToCreate' href={'/create'}><span>+</span></Link>
             <form action="" onSubmit={handleSubmit(handelSearch)} className='searchForm'>
                 <Input register={register} name='searchTodo' placeholder='search Todo' />
                 <Button btnLabel='Search' />
@@ -60,11 +62,11 @@ export default function ToDoList() {
             {!todos ? (
                 <div>There are no ToDo yet.</div>
             ) : (
-                <div className='taskList'>
+                <div className='todoList'>
                     {todos.map((item) => (
                         <div
                             key={item.id}
-                            className='taskContainer'>
+                            className='todoContainer'>
                             <div className='checkBoxContainer'>
                                 <CheckBox
                                     checked={item.isCompleted}

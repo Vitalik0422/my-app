@@ -18,7 +18,7 @@ export const todosApi = {
     delete(data: deleteId){
         return axiosInstance.post(URL.TODO_DELETE, data)
     },
-    isCompleted(data: {id: number, isCompleted: boolean}){
+    isCompleted(data: {id: string, isCompleted: boolean}){
         return axiosInstance.post(URL.TODO_IS_COMPLETED, data)
     }
 }

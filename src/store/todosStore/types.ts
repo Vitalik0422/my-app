@@ -4,7 +4,7 @@ export type todoCreate = {
 }
 
 export type deleteId = {
-    'id': number
+    'id': string
 }
 
 export type updateTodo = {

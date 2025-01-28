@@ -45,40 +45,45 @@ body {
   }
 
   button {
-    @apply w-24 h-8 rounded bg-violet-800 text-white place-self-end
+    @apply w-24 h-8 rounded bg-violet-800 text-white
   }
 
+  /* CREATE */
+  .formCreateTask{
+    @apply flex gap-4 flex-col
+  }
+  /* TODO LIST */
+  .linkToCreate{
+    @apply fixed right-10 bottom-10 rounded-full bg-violet-800 w-12 h-12 text-center text-3xl text-white pt-2
+  }
   .searchForm {
-    @apply w-full flex gap-4
+    @apply w-full flex gap-4 mb-4
   }
-
-  .taskList {
+  .todoList {
     @apply w-full flex flex-col
   }
-  .taskContainer{
-    @apply w-full flex flex-[1_4_1] border-b border-violet-800
+  .todoContainer{
+    @apply w-full h-14 flex gap-1 border-b border-violet-800 items-center
   }
-
+  .todoContainer div{
+    @apply flex-[10]
+  }
+  .todoContainer .checkBoxContainer{
+    @apply w-8 flex-initial
+  }
+  .todoContainer Button{
+    @apply flex-1
+  }
   .checkBox {
     @apply w-6 h-6 appearance-none rounded border bg-white checked:bg-indigo-600 checked:text-white checked:before:content-['✔'] checked:before:text-white checked:before:text-lg checked:before:flex checked:before:items-center checked:before:justify-center checked:before:w-full checked:before:h-full
   }
-
-  .containerList {
-    @apply flex flex-col items-center
-  }
-
-  .btnCreateLink {
-    @apply size-10 text-white text-3xl rounded-full absolute bottom-20 right-20 bg-violet-800 mt-2
-  }
-
+   /* STATUS OPERATION */
   .snackBarContainer {
     @apply w-40 h-16 border border-violet-800 rounded fixed top-10 right-10 text-center p-4 text-xl
   }
-
   .Success {
     @apply border-green-600 text-green-600
   }
-
   .Error {
     @apply border-red-600
   }

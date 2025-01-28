@@ -6,7 +6,8 @@ import { validationCreateTask } from './validationSchemaCreateTasl';
 import { todosApi } from '@/app/api/todosApi';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
-import SnackBar from '../SnackBar/SnackBar';
+import SnackBar from '@/components/ui/SnackBar';
+import { useRouter } from 'next/navigation';
 type SubmitData = {
     'title': string,
     'text': string
@@ -14,11 +15,13 @@ type SubmitData = {
 type SnackBarStatus = {
     status: number | undefined
 }
+
 const resolver = joiResolver(validationCreateTask)
 
 
 export default function Create() {
     const [isStatus, setIsStatus] = useState<SnackBarStatus>()
+    const router = useRouter()
 
     const {
         register,
@@ -28,14 +31,18 @@ export default function Create() {
     } = useForm<SubmitData>({
         resolver
     })
+    const timerRedirect = setTimeout(() =>{
+        setIsStatus(undefined)
+        router.push('/list')
+    }, 4000)
 
     const onSubmit = async (data: SubmitData) => {
-        reset()
+        clearTimeout(timerRedirect)
         try {
             const response = await todosApi.create(data)
-            console.log(response);
             if (response.status === 201) {
                 setIsStatus({ status: 201 })
+                reset()
             }
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
@@ -62,7 +69,7 @@ export default function Create() {
                     type='submit'
                 />
             </form>
-            {isStatus && <SnackBar status={isStatus.status} />}
+            {isStatus && <SnackBar message='Success' type='success' duration={4000}/>}
         </>
     )
 }
